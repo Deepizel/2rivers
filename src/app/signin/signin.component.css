@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+.container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:360px;
+    height:510px;
+    background-color:#fff;
+    border-radius:10px;
+    border:none;
+    padding:20px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.input-field button {
+  background-color: transparent;
+  border: none;
+}
+
+.card1{
+    width:360px;
+    height:370px;
+    background-color:#fff;
+    border-radius:10px;
+    border:none;
+    padding:20px;
+    border: 1px solid rgb(180, 180, 236);
+}
+.text-danger {
+    font-weight: 500;
+    font-size: 14px;
+    
+  }
+
+  #logo{
+   font-family: 'Fasthand', cursive;
+   font-size: 28px;
+   color: rgb(15, 15, 48);
+  }
+.form{
+    margin-top:15px;
+}
+
+.form label{
+    font-weight:700;
+    font-size:14px;
+}
+.form input{
+    height:45px;
+    border:2px solid #eee;
+    transition:all 0.9s;
+}
+
+.form input:focus{
+    box-shadow:none;
+    border:2px solid #112A48;
+}
+
+.text-info{
+    color: black;
+}
+
+.login-button{
+    margin-top:15px;
+}
+
+.login-button button{
+    height:45px;
+}
+
+.btn-success{
+    background-color: #112A48!important;
+    border: none;
+}
+.text-decoration{
+    color: #112A48 !important;
+}
+
+.already{
+    font-size: 14px;
+}

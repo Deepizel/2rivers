@@ -1,0 +1,196 @@
+<section style="background-color: #112a48">
+  <div class="container">
+    <div class="card">
+      <div class="d-flex justify-content-center">
+        <img src="" alt="" style="width: 190px" /><br />
+        <!-- <h4>Signin</h4> -->
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <!-- <img src="/assets/images/LOGO (1).jpg" alt="" style="width: 190px;"><br> -->
+        <!-- <h4>Signin</h4> -->
+        <a routerLink="" id="logo">Just-Us</a>
+      </div>
+      <form #loginform="ngForm" (ngSubmit)="LoginUser()">
+        <p class="text-center text-info h6">Please Enter your details</p>
+        <div class="form">
+          <label>Email/Phone</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email address"
+            [(ngModel)]="userLoginRequest.EmailOrPhoneNumber"
+            [ngModelOptions]="{ standalone: true }"
+          />
+          <!-- <span class="text-danger"> Email is required</span>
+          <span class="text-danger"
+            >Enter a valid email address (lowercase only)</span
+          > -->
+        </div>
+
+        <div class="form">
+          <label class="d-flex justify-content-between align-items-center"
+            ><span>Password</span><a href="#" class="text-decoration-none"></a
+          ></label>
+          <div class="input-field">
+            <input
+              [type]="type"
+              class="form-control"
+              placeholder="Password"
+              [(ngModel)]="userLoginRequest.password"
+              [ngModelOptions]="{ standalone: true }"
+            />
+            <button
+              type="button"
+              (click)="hideShowPass()"
+              class="text-muted mt-3"
+            >
+              <span class="fa {{ eyeIcon }}"></span> 
+            </button>
+          </div>
+          <!-- <span class="text-danger">Password is required</span> -->
+          <!-- <label class="d-flex justify-content-between align-items-center"
+            ><span></span
+            ><a href="#" class="text-decoration-none fw-light mt-1"></a
+          ></label> -->
+        </div>
+
+        <div class="login-button">
+          <button
+            class="btn btn-success w-100"
+            type="button"
+            (click)="LoginUser()"
+          >
+            <span
+              *ngIf="isLoading"
+              class="spinner-border spinner-border-sm text-light"
+            ></span>
+            Login
+          </button>
+          <!-- <button  *ngIf="buttonText !== 'Loading'"  (click)="changeMode(mode)"class="btn btn-success w-100" [disabled]="!loginForm.valid">
+{{buttonText}} 
+          </button>
+          <button *ngIf="buttonText === 'Loading'" (click)="changeMode(mode)"class="btn btn-success w-100" [disabled]="!loginForm.valid">
+{{buttonText}} <i class="fa fa-spinner w3-spin" style="font-size:14px; color: white; font-weight: 900;"></i> 
+          </button> -->
+          <!-- <button class="btn btn-success w-100" [disabled]="!loginForm.valid">Sign In</button> -->
+        </div>
+      </form>
+      <p class="already mt-2 d-flex justify-content-center align-items-center">
+        Don't have an account?
+        <span
+          ><a routerLink="/signup" class="ms-2 text-decoration-none"
+            >Register Now</a
+          ></span
+        >
+      </p>
+      <p class="already d-flex justify-content-center align-items-center">
+        <span
+          ><a routerLink="/forgot-password" class="ms-2 text-decoration-none"
+            >Forgot Password</a
+          ></span
+        >
+        <span
+          ><a
+            class="btn d-inline-flex btn-sm btn-primary mx-1"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            >Confirm Booking</a
+          ></span
+        >
+      </p>
+      <!-- <label class="h6 d-flex justify-content-between align-items-center"><span>Already have an account?</span><a href="#" class="text-decoration-none mt-1">Back to home</a></label>
+         -->
+    </div>
+  </div>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1
+            class="modal-title fs-5 d-inline-flex mx-5"
+            id="staticBackdropLabel"
+          >
+            Verify Booking Details
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="modalcontent">
+            <form [formGroup]="requestForm" (submit)="getAccessCode()">
+              <label for="">Enter Access Code:</label>
+              <input
+                style="border: 1px solid grey; border-radius: 3px; height: 40px"
+                class="mx-2"
+                type="text"
+                formControlName="code"
+              />
+              <button type="submit">Confirm</button>
+            </form>
+            <!-- Result display form -->
+            <div class="card1 mx-3 mt-2" *ngIf="requestDetails != null">
+              <P>1. AccessCode:{{ accessCode }} </P>
+              <p>2. BookingId: {{ bookingId }}</p>
+              <p>3. Booking Time: {{ bookingTime | date }}</p>
+              <p>4. Email: {{ email }}</p>
+              <p>5. End time: {{ endDateTime }}</p>
+              <p>6. Allows Access for: {{ noOfPeople }}</p>
+              <p>7. Phone: {{ phone }}</p>
+              <p>8. AmountPaid: {{ AmountPaid }}</p>
+              <p>9. ScreeningTime: {{ screeningTime }}</p>
+              <p>10. Transaction Ref: {{ transactionRef }}</p>
+            </div>
+            <!-- <form>
+              <div
+                class="modal-footer"
+                style="display: flex; justify-content: space-between"
+              >
+                <button id="" type="submit" class="btn btn-primary">
+                  SAVE
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </form> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="loader"></div> -->
+<!-- .loader {
+  margin: auto;
+  border: 20px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 20px solid #FF7A59;
+  width: 200px;
+  height: 200px;
+  animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} -->
