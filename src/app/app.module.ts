@@ -14,6 +14,16 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AllBooksComponent } from './components/all-books/all-books.component';
 import { FeaturedBooksComponent } from './components/featured-books/featured-books.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {AngularFireModule} from '@angular/fire/compat'
+import { environment } from './environment/environment.prod';
+import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import { BooklistComponent } from './Pages/booklist/booklist.component';
+import { UserlistComponent } from './Pages/userlist/userlist.component';
+import { OrderlistComponent } from './Pages/orderlist/orderlist.component';
+import { AdminComponent } from './Pages/admin/admin.component';
+import { AdminProfileComponent } from './Pages/admin-profile/admin-profile.component';
+
+
 
 @NgModule({
   declarations: [
@@ -28,13 +38,21 @@ import { FooterComponent } from './components/footer/footer.component';
     HeroComponent,
     AllBooksComponent,
     FeaturedBooksComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    BooklistComponent,
+    UserlistComponent,
+    OrderlistComponent,
+    AdminComponent,
+    AdminProfileComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
