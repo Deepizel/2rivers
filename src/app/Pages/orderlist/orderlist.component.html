@@ -36,7 +36,98 @@
     <!-- Main Content -->
     <main class="mt-4">
       <!-- Content Projection: Page content will be inserted here -->
-      <ng-content class="bg-surface-secondary"></ng-content>
+      <div class="container-fluid">
+        <!-- Card stats -->
+
+        <div class="card shadow border-0 mt-5 mb-7">
+          <div class="card-header logbar py-3">
+            <h5 class="mb-0 mt-3">Orders</h5>
+            <div class="filter d-flex mt-2">
+              <input
+                id="searchlog"
+                class="input"
+                type="text"
+                placeholder="Search by Email"
+              />
+              <div class="filterby mx-1">
+                <label for="filterby">From Date</label>
+                <input
+                  id="StartDate"
+                  class="mx-1 input"
+                  type="text"
+                  onfocus="(this.type='date')"
+                  placeholder="Start date"
+                  name="filterby"
+                />
+                <label for="filterto">To Date</label>
+                <input
+                  id="EndDate"
+                  class="mx-1 input"
+                  type="text"
+                  onfocus="(this.type='date')"
+                  placeholder="End date"
+                  name="filterto"
+                />
+                <button class="btn p-2">Refresh</button>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive p-2">
+            <table class="table table-hover table-nowrap">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">SN</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">No. of Books</th>
+                  <th scope="col">Book Code</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="list">
+                  <td></td>
+
+                  <td class="mx-2"></td>
+                  <td class="mx-2"></td>
+                  <td class="mx-2"></td>
+                  <td class="mx-2"></td>
+                  <td></td>
+                  <td class="mx-2"></td>
+                  <td></td>
+                  
+                  <td class="">
+                    <a
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop1"
+                      class="btn btn-sm btn-neutral"
+                      style="background-color: green; color: white"
+                      >View</a
+                    >
+
+                    <!-- <a href="#" class="btn btn-sm btn-neutral">Edit</a> -->
+
+                    <!-- <button
+                      type="button"
+                      class="btn btn-sm btn-square btn-neutral text-danger-hover"
+                    >
+                      <i class="bi bi-trash"></i>
+                    </button> -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- <div class="card-footer border-0 py-5">
+            <span class="text-muted text-sm"
+              >Showing 1 items out of 1 results found</span
+            >
+          </div> -->
+        </div>
+      </div>
     </main>
      
   </div>

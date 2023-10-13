@@ -5,7 +5,7 @@
   <!-- Main content -->
   <div class="h-screen flex-grow-1 overflow-y-lg-auto">
     <!-- Header -->
-    <header class="bg-surface-primary border-bottom pt-1">
+    <header class="bg-surface-primary border-bottom pt-2 mt-1">
       <div class="container-fluid">
         <div class="mb-4">
           <div class="row align-items-center">
@@ -15,19 +15,455 @@
             </div>
             <!-- Actions -->
             <div class="col-sm-6 col-12 text-sm-end">
-              <!-- <div class="mx-n1">
-                <a
-                  href="#"
-                  class="btn d-inline-flex btn-sm btn-neutral border-base mx-1"
+              <div class="mx-n1">
+                <button
+                  type="button"
+                  class="btn d-inline-flex btn-sm btn-primary mx-1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
                 >
-                  <span class="pe-2"> <i class="bi bi-pencil"></i> </span>
-                  <span>Edit</span>
-                </a>
-                <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
-                  <span class="pe-2"> <i class="bi bi-plus"></i> </span>
-                  <span>Create</span>
-                </a>
-              </div> -->
+                  <span class=""> <i class="bi bi-plus"></i> </span>
+                  <span>Add New Book</span>
+                </button>
+              </div>
+              <!-- Button trigger modal -->
+
+              <!-- Modal for User -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1
+                        class="modal-title fs-5 d-inline-flex mx-3"
+                        id="staticBackdropLabel"
+                      >
+                        Add New Book
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body mt-3">
+                      <!-- add new book form -->
+
+                      <form>
+                        <div class="modalcontent">
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <div class="form-outline">
+                                <label for="FirstName">Book Name</label>
+                                <input
+                                  id="Name"
+                                  type="text"
+                                  placeholder="Book Name"
+                                  formControlName="Name"
+                                />
+                              </div>
+                              <!-- email -->
+                              <div class="form-outline">
+                                <label for="Email">Title</label>
+                                <input
+                                  id="Email"
+                                  type="email"
+                                  placeholder="Email"
+                                  formControlName="email"
+                                />
+                              </div>
+                             
+
+                              <!-- Password -->
+                              <div class="form-outline mt-2">
+                                <label for="Password">Password</label>
+                                <input
+                                  id="password"
+                                  type="password"
+                                  placeholder="Default Password"
+                                />
+                                <!-- <div *ngIf="ErrorMessage">
+                                  <small style="color: red"
+                                    >Passwords do not match.</small
+                                  >
+                                </div> -->
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <!-- lastname -->
+                              <div class="form-outline">
+                                <label for="LastName">LastName</label>
+                                <input
+                                  type="text"
+                                  id="LastName"
+                                  placeholder="LastName"
+                                  formControlName="lastName"
+                                />
+                              </div>
+                              <!-- phone number -->
+                              <div class="form-outline">
+                                <label for="Phonenumber">Phone number</label>
+                                <input
+                                  type="phonenumber"
+                                  id="Phonenumber"
+                                  formControlName="phoneNumber"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <!-- <div class="text-center">
+                        <button
+                          class="btn"
+                          type="button"
+                          (click)="addNewStaff()"
+                          style="background-color: #5c60f5; color: white"
+                          [disabled]="isFormIncomplete"
+                        >
+                          Save
+                        </button>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal end -->
+
+              <!-- view modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop1"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1
+                        class="modal-title fs-5 d-inline-flex mx-3"
+                        id="staticBackdropLabel"
+                      >
+                        View User Profile
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body mt-3">
+                      <!-- add new admin form -->
+                      <form>
+                        <div class="modalcontent">
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="form-outline">
+                                <label for="FirstName">FirstName</label>
+                                <input
+                                  type="text"
+                                  placeholder="FirstName"
+                                  formControlName="firstName"
+                                />
+                              </div>
+                              <!-- lastname -->
+                              <div class="form-outline">
+                                <label for="LastName">LastName</label>
+                                <input
+                                  type="text"
+                                  placeholder="LastName"
+                                  formControlName="lastName"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <!-- phone number -->
+                              <div class="form-outline">
+                                <label for="Phonenumber">Phone number</label>
+                                <input
+                                  type="phonenumber"
+                                  formControlName="phoneNumber"
+                                />
+                              </div>
+
+                              <!-- email -->
+                              <div class="form-outline">
+                                <label for="Email">Email</label>
+                                <input
+                                  type="email"
+                                  placeholder="Email"
+                                  formControlName="email"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <!-- <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button> -->
+                      <!-- <button type="button" class="btn btn-primary">
+                        Understood
+                      </button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- edit modal -->
+              <div class="modal" id="staticBackdrop2" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1
+                        class="modal-title fs-5 d-inline-flex mx-3"
+                        id="staticBackdropLabel"
+                      >
+                        Edit User Profile
+                      </h1>
+                      <button type="button" class="btn-close"></button>
+                    </div>
+                    <div class="modal-body mt-3">
+                      <!-- edit admin form -->
+                      <form>
+                        <div class="modalcontent">
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="form-outline">
+                                <label for="id">Id</label>
+                                <input
+                                  type="number"
+                                  readonly
+                                  formControlName="id"
+                                />
+                              </div>
+
+                              <div class="form-outline">
+                                <!-- lastname -->
+                                <div class="form-outline">
+                                  <label for="LastName">LastName</label>
+                                  <input
+                                    id="LastName1"
+                                    type="text"
+                                    formControlName="lastName"
+                                  />
+                                </div>
+                                <label for="Phonenumber">Phone number</label>
+                                <input
+                                  id="PhoneNumber1"
+                                  type="phonenumber"
+                                  formControlName="phoneNumber"
+                                  readonly
+                                />
+                                <div style="display: flex">
+                                  <label style="flex-basis: 40%">
+                                    Is Admin
+                                  </label>
+                                  <input
+                                    id="IsAdmin1"
+                                    style="flex-basis: 10%"
+                                    type="checkbox"
+                                    formControlName="isAdmin"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <!-- first Name -->
+                              <div class="form-outline">
+                                <label for="FirstName">FirstName</label>
+                                <input
+                                  type="text"
+                                  id="FirstName1"
+                                  formControlName="firstName"
+                                />
+                              </div>
+                              <!-- email -->
+                              <div class="form-outline">
+                                <label for="Email">Email</label>
+                                <input
+                                  id="Email1"
+                                  type="email"
+                                  placeholder="Email"
+                                  formControlName="email"
+                                />
+                              </div>
+
+                              <!-- status -->
+                              <div class="form-outline mb-3">
+                                <label for="status">Status</label>
+                                <select
+                                  name=""
+                                  id="status"
+                                  formControlName="isActive"
+                                >
+                                  <option value="true">Active</option>
+                                  <option value="false">Inactive</option>
+                                </select>
+                                <!-- <input formControlName="isActive" type="checkbox" name="" id=""> -->
+                              </div>
+                              <div style="display: flex">
+                                <label style="flex-basis: 55%">
+                                  Super Admin
+                                </label>
+                                <input
+                                  id="IsSuperAdmin1"
+                                  style="flex-basis: 10%"
+                                  type="checkbox"
+                                  formControlName="isSuperAdmin"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="footer mt-2 d-flex justify-content-center">
+                          <button
+                            class="btn"
+                            type="button"
+                            style="background-color: #5c60f5; color: white"
+                          >
+                            <span>Update Profile</span>
+                          </button>
+
+                          <button
+                            type="button"
+                            class="btn"
+                            style="background-color: #00cc88; color: white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop3"
+                          >
+                            <span>Audit Trail</span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="text-center"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- audit  -->
+              <div class="modal" id="staticBackdrop3" tabindex="-1">
+                <div class="modal-dialog">
+                  <div
+                    class="modal-content"
+                    style="
+                      height: 600px !important;
+                      width: 900px !important;
+                      position: relative;
+                      right: 50%;
+                      top: 30%;
+                    "
+                  >
+                    <div class="modal-header">
+                      <h5
+                        class="modal-title fs-5 d-inline-flex mx-5"
+                        id="staticBackdropLabel"
+                      >
+                        Audit Trail
+                      </h5>
+                      <button type="button" class="btn-close"></button>
+                    </div>
+                    <div class="modal-body" style="width: 900px !important">
+                      <!-- add new admin form -->
+                      <div class="wrapper px-lg-3">
+                        <div class="table-responsive" style="width: 100%">
+                          <table class="table table-hover table-nowrap">
+                            <thead class="thead-light">
+                              <tr>
+                                <th scope="col" class="left-align p-2">SN</th>
+                                <th scope="col" class="left-align p-2">User</th>
+                                <th scope="col" class="left-align p-2">
+                                  Event Date
+                                </th>
+                                <th scope="col" class="left-align p-2">
+                                  Tablename
+                                </th>
+                                <th scope="col" class="left-align p-2">
+                                  columnName
+                                </th>
+                                <th scope="col" class="left-align p-2">
+                                  Old value
+                                </th>
+                                <th scope="col" class="left-align p-2">
+                                  New value
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="mx-2"></td>
+                                <td>
+                                  <a
+                                    class="text-heading font-semibold"
+                                    href="#"
+                                  >
+                                  </a>
+                                </td>
+                                <td>
+                                  <a
+                                    class="text-heading font-semibold"
+                                    href="#"
+                                  >
+                                  </a>
+                                </td>
+                                <td>
+                                  <a
+                                    class="text-heading font-semibold mx-1"
+                                    href="#"
+                                  >
+                                  </a>
+                                </td>
+                                <td></td>
+
+                                <td></td>
+                                <td class="text-center"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- <div class="has-text-centered">
+                            <pagination-controls
+                              (pageChange)="p = $event"
+                            ></pagination-controls>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <!-- <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button> -->
+                      <!-- <button type="button" class="btn btn-primary">
+                        Understood
+                      </button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
