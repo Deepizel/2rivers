@@ -1,0 +1,62 @@
+.my-nav {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+.navbar-brand, .navbar-toggler-icon{
+  color: var(--text-white);
+
+}
+.nav-item .nav-link{
+  color: var(--text-white);
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+.carousel-item {
+  height: 100vh;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.header-text {
+    position: absolute;
+    top: 30%;
+    left: 7.8%;
+      font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+.hero-title{
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+
+@media (max-width: 768px) {
+  .header-text{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    text-align: center;
+    padding: 5px;
+
+  }
+  .hero-title{
+    font-size: 2rem;
+  }
+
+  .my-nav .navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.9); 
+
+    width: 100%;
+  }
+}
