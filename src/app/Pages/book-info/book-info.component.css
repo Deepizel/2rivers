@@ -1,3 +1,7 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 input {
   border: 1px solid grey;
   width: 60px;
@@ -31,10 +35,19 @@ input {
   width: 100%;
 }
 
+.price p{
+    font-size: 20px;
+    font-weight: 600;
+    color: green;
+}
 .stock {
   padding: 20px;
 }
 
+.strike{
+    text-decoration: line-through;
+    color: red;
+}
 button {
   border-radius: 20px 20px 20px 20px;
   width: 75%;
@@ -62,6 +75,35 @@ button {
   padding: 30px;
 }
 
+.bold{
+    font-weight: 600;
+}
+
+.nav-link{
+    border: none;
+}
+
+.description{
+    padding: 40px;
+}
+
+.nav-tabs{
+    border-bottom: 1px dotted grey;
+}
+
+.book-details{
+   width: 40%;
+}
+
+.book-info-container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.huge-dots{
+    border-bottom: 0.5px dotted black;
+}
+
 @media (max-width: 768px) {
   * {
     padding: 10px !important;
@@ -83,4 +125,36 @@ button {
   button {
     margin-top: 20px;
   }
+
+  .content {
+    margin: 0 !important;
+  }
+
+  .content h1 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  input{
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  button{
+    width: 100%;
+    height: 45px;
+  }
+
+  .strike{
+    width: 100%;
+  }
+
+  .book-details{
+   width: 100%;
+}
+
+.book-info-container{
+    width: 100%;
+    margin: 0 auto;
+}
 }

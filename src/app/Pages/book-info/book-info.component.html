@@ -25,7 +25,7 @@
       </div>
       <div class="col-lg-6 desc-content mt-3 px-3">
         <div class="content mx-4">
-          <h3>Lyrics of the lalala Musical</h3>
+          <h1>Lyrics of the lalala Musical</h1>
           <!-- reviews -->
           <p>No of reviews</p>
           <!-- description -->
@@ -37,7 +37,9 @@
           </p>
           <div class="minicard card1 mb-3">
             <div class="price">
-              <p>NGN 4,300</p>
+              <p class="mx-3">
+                <span class="strike">NGN 7,500</span> <br />NGN 4,300
+              </p>
             </div>
             <div class="stock">
               <p>280 in stock</p>
@@ -48,15 +50,17 @@
             </div>
           </div>
           <!-- categories -->
-          <p>Categories:Culture, Life Style</p>
-          <p>Tags: Dream, Music, Sound</p>
+          <p>Categories:<span class="bold">Culture, Life Style</span></p>
+          <p>Tags: <span class="bold">Dream, Music, Sound</span></p>
         </div>
       </div>
     </div>
   </div>
-  <!-- other descriptions -->
-  <div class="row book-info-hero">
-    <div class="col-lg-6 justify-content-center">
+</section>
+<!-- other descriptions -->
+<section class="huge-dots">
+  <div class="row book-info-hero justify-content-center book-info-container">
+    <div class="col-lg-6 justify-content-center book-details">
       <h3 class="mt-4 mb-3 text-center">Book Details</h3>
       <div class="mb-4">
         <div class="split d-flex justify-content-around px-2 py-2">
@@ -81,7 +85,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 book-details">
       <h3 class="mt-4 mb-3 text-center">About the Book</h3>
       <div class="text-content">
         <p>
@@ -99,49 +103,116 @@
       </div>
     </div>
   </div>
+</section>
 
+<section>
   <!-- reviews & description -->
-  <div class="row">
-    <div class="nav nav-tabs horizontal-tabs">
-      <a class="nav-link active" data-toggle="tab" href="#profile"
-        >Description</a
+  <div class="row px-5 py-5">
+    <div class="tab-content" id="myTabContent ">
+      <div
+        class="tab-pane fade show active"
+        id="home"
+        role="tabpanel"
+        aria-labelledby="home-tab"
       >
-      <a class="nav-link mx-2" data-toggle="tab" href="#view-booking"
-        >Reviews</a
+        <div class="row" style="background-color: white">
+          <div class="d-flex justify-content-between mx-5">
+            <div class="nav nav-tabs horizontal-tabs">
+              <a class="nav-link active" data-toggle="tab" href="#Description"
+                >Description</a
+              >
+
+              <a class="nav-link mx-2" data-toggle="tab" href="#Reviews"
+                >Reviews</a
+              >
+            </div>
+          </div>
+          <div
+            class="col-md-12"
+            style="
+              box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+              background-color: white;
+            "
+          >
+            <div class="tab-content">
+              <div id="Description" class="tab-pane fade show active">
+                <!-- Report Content -->
+                <div class="description">
+                  <p>
+                    If you want to buy books online, you’ll get a better deal if
+                    you get them used. Depending on the condition you get them
+                    in, you may just end up paying a few cents plus shipping.
+                    Make sure you read through the description of the book to
+                    see if there are any damages you should be aware of.
+                  </p>
+                  <p>
+                    Be sure to read everything about the item that you want to
+                    buy. A picture of a product can be deceiving. They can make
+                    products look much smaller or bigger that they really are.
+                    Reading the description will allow you to be confident in
+                    the item you are purchasing.
+                  </p>
+                  <p>
+                    If you want to buy books online, you’ll get a better deal if
+                    you get them used. Depending on the condition you get them
+                    in, you may just end up paying a few cents plus shipping.
+                    Make sure you read through the description of the book to
+                    see if there are any damages you should be aware of.
+                  </p>
+                </div>
+              </div>
+              <!-- Approved Applications section -->
+              <div id="Reviews" class="tab-pane fade">
+                <!-- View Booking Content -->
+                <div class="description">
+                  <p>
+                    If you want to buy books online, you’ll get a better deal if
+                    you get them used. Depending on the condition you get them
+                    in, you may just end up paying a few cents plus shipping.
+                    Make sure you read through the description of the book to
+                    see if there are any damages you should be aware of.
+                  </p>
+                  <p>
+                    Be sure to read everything about the item that you want to
+                    buy. A picture of a product can be deceiving. They can make
+                    products look much smaller or bigger that they really are.
+                    Reading the description will allow you to be confident in
+                    the item you are purchasing.
+                  </p>
+                  <p>
+                    If you want to buy books online, you’ll get a better deal if
+                    you get them used. Depending on the condition you get them
+                    in, you may just end up paying a few cents plus shipping.
+                    Make sure you read through the description of the book to
+                    see if there are any damages you should be aware of.
+                  </p>
+                </div>
+              </div>
+              <!-- Rejected Application section -->
+              <div id="view-booking" class="tab-pane fade">
+                <!-- View Booking Content -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="profile"
+        role="tabpanel"
+        aria-labelledby="profile-tab"
       >
-    </div>
-    <div class="tab-content">
-      <div id="profile" class="tab-pane fade show active">
-        <!-- Unapproved pplications Content -->
+        ...
       </div>
-      <!-- Approved Applications section -->
-      <div id="view-booking" class="tab-pane fade">
-        <!-- View Booking Content -->
+      <div
+        class="tab-pane fade"
+        id="contact"
+        role="tabpanel"
+        aria-labelledby="contact-tab"
+      >
+        ...
       </div>
-      <!-- Rejected Application section -->
-      <div id="view-booking" class="tab-pane fade">
-        <!-- View Booking Content -->
-        <div class="table-responsive"></div>
-      </div>
-      <div id="change-password" class="tab-pane fade mb-5">
-        <!-- All applications Content -->
-      </div>
-    </div>
-    <div
-      class="tab-pane fade"
-      id="profile"
-      role="tabpanel"
-      aria-labelledby="profile-tab"
-    >
-      ...
-    </div>
-    <div
-      class="tab-pane fade"
-      id="contact"
-      role="tabpanel"
-      aria-labelledby="contact-tab"
-    >
-      ...
     </div>
   </div>
 </section>
