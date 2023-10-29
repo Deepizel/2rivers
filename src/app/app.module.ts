@@ -22,6 +22,7 @@ import { UserlistComponent } from './Pages/userlist/userlist.component';
 import { OrderlistComponent } from './Pages/orderlist/orderlist.component';
 import { AdminComponent } from './Pages/admin/admin.component';
 import { AdminProfileComponent } from './Pages/admin-profile/admin-profile.component';
+import { BookInfoComponent } from './Pages/book-info/book-info.component';
 
 
 
@@ -45,6 +46,7 @@ import { AdminProfileComponent } from './Pages/admin-profile/admin-profile.compo
     OrderlistComponent,
     AdminComponent,
     AdminProfileComponent,
+    BookInfoComponent,
 
   ],
   imports: [

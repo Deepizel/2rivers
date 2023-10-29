@@ -1,0 +1,28 @@
+.card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.btn{
+height: 15px;
+color: black;
+}
+.books-btn{
+    height: 35px;
+    border-radius: 10px 0px 0px 10px;
+    width: 45%;
+    border: 1px solid grey;
+}
+
+.books-btn-right{
+    height: 35px;
+    width: 45%;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid grey;
+}
+
+.popular-books{
+    background-color: rgb(240, 239, 239);
+    margin-top: 5%;
+    align-items: center;
+}

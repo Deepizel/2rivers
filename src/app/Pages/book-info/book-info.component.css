@@ -1,0 +1,86 @@
+input {
+  border: 1px solid grey;
+  width: 60px;
+  outline: none;
+}
+
+.info-section {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: rgb(229, 238, 238);
+}
+
+.book-info-hero {
+  background-color: white;
+}
+
+.thumbnail {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.card1 {
+  width: 60%;
+  height: 30%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.price {
+  background-color: aliceblue;
+  width: 100%;
+}
+
+.stock {
+  padding: 20px;
+}
+
+button {
+  border-radius: 20px 20px 20px 20px;
+  width: 75%;
+  border: 1px solid aliceblue;
+  height: 35px;
+  margin-left: 3px;
+  background-color: black;
+  color: white;
+}
+.split {
+  border-top: 1px dotted grey;
+  border-bottom: 1px dotted grey;
+  justify-content: first baseline;
+}
+.split1 {
+  border-top: 1px dotted grey;
+  border-bottom: 1px dotted grey;
+  justify-content: first baseline;
+  background-color: rgb(233, 228, 228);
+}
+
+.top-section {
+  border-bottom: 1px dotted grey;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  * {
+    padding: 10px !important;
+  }
+
+  .thumbnail {
+    height: 80px;
+    width: 80px;
+  }
+
+  .desc-content {
+    padding: 0px !important;
+  }
+
+  .minicard {
+    width: 90%;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}

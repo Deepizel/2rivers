@@ -9,6 +9,7 @@ import { UserlistComponent } from './Pages/userlist/userlist.component';
 import { BooklistComponent } from './Pages/booklist/booklist.component';
 import { AdminComponent } from './Pages/admin/admin.component';
 import { AdminProfileComponent } from './Pages/admin-profile/admin-profile.component';
+import { BookInfoComponent } from './Pages/book-info/book-info.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'book-list', component: BooklistComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'admin-profile', component: AdminProfileComponent },
+  { path: 'more-book-information', component: BookInfoComponent },
 ];
 
 @NgModule({

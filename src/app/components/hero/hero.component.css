@@ -27,6 +27,10 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+header{
+  height: 90vh;
+}
 .header-text {
     position: absolute;
     top: 30%;
